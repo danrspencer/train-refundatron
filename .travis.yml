@@ -13,6 +13,6 @@ install:
   - 'yarn install'
   - 'yarn elm-app install -y'
 script:
-  - 'yarn test --prompt'
+  - 'yarn test --prompt=yes'
   - 'yarn elm-format --validate'
   
