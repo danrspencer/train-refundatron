@@ -12,6 +12,7 @@ branches:
   - version
 install:
   - 'yarn install'
+  - 'yarn elm-app instal'
 script:
   - 'yarn test'
   
