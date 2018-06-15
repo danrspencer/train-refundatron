@@ -10,7 +10,7 @@ branches:
   except:
   - version
 install:
-  - 'yarn global install elm elm-app'
+  - 'yarn global add elm elm-app'
   - 'yarn install'
   - 'elm-app install -y'
 script:
