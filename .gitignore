@@ -9,6 +9,7 @@ repl-temp-*
 
 # Dependency directories
 node_modules
+.lobo
 
 # Desktop Services Store on macOS
 .DS_Store
