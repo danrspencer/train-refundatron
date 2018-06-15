@@ -3,7 +3,7 @@ cache:
   directories:
     - "node_modules"
     - "elm-stuff"
-    - ".lobo"
+    - "tests/elm-stuff"
 branches:
   except:
   - version
@@ -12,5 +12,5 @@ install:
   - 'yarn elm-app install -y'
 script:
   - 'yarn elm-app test'
-  - 'yarn elm-format --validate'
+  - 'yarn format --validate'
   
