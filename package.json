@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "lobo --framework=elm-test"
+    "test": "lobo --framework=elm-test",
+    "analyse": "elm-analyse --elm-format-path=./node_modules/.bin/elm-format"
   },
   "devDependencies": {
     "elm-analyse": "^0.14.2",

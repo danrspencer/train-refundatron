@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "stable"
+  - "lts/*"
+cache:
+  directories:
+    - "node_modules"
+    - "elm-stuff"
+    - ".lobo"
+branches:
+  except:
+  - version
+install:
+  - 'yarn install'
+script:
+  - 'yarn analyse'
+  - 'yarn test'
