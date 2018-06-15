@@ -10,9 +10,10 @@ branches:
   except:
   - version
 install:
+  - 'yarn global install elm elm-app'
   - 'yarn install'
-  - 'yarn elm-app install -y'
+  - 'elm-app install -y'
 script:
-  - 'yarn test --prompt=yes'
+  - 'elm-app test'
   - 'yarn elm-format --validate'
   
