@@ -1,6 +1,4 @@
-language: node_js
-node_js:
-  - "stable"
+language: elm
 cache:
   directories:
     - "node_modules"
@@ -10,10 +8,9 @@ branches:
   except:
   - version
 install:
-  - 'yarn global add elm elm-app'
   - 'yarn install'
-  - 'elm-app install -y'
+  - 'yarn elm-app install -y'
 script:
-  - 'elm-app test'
+  - 'yarn elm-app test'
   - 'yarn elm-format --validate'
   
