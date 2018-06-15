@@ -1,7 +1,8 @@
 {
   "scripts": {
     "test": "lobo --framework=elm-test",
-    "analyse": "elm-analyse --elm-format-path=./node_modules/.bin/elm-format"
+    "analyse": "elm-analyse --elm-format-path=./node_modules/.bin/elm-format",
+    "analyse-report": "yarn analyse -s"
   },
   "devDependencies": {
     "elm-analyse": "^0.14.2",

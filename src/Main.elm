@@ -1,4 +1,4 @@
-module Main exposing (..)
+module Main exposing (init, update, view, main)
 
 import Html exposing (Html, text, div, h1, img)
 import Html.Attributes exposing (src)
