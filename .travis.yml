@@ -11,7 +11,7 @@ branches:
   - version
 install:
   - 'yarn install'
-  - 'yarn elm-app install'
+  - 'yarn elm-app install -y'
 script:
   - 'yarn test'
   - 'yarn elm-format --validate'
