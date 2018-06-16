@@ -9,12 +9,16 @@ branches:
   - gh-pages
   - version
 install:
-  - cd client && yarn install
-  - cd client && yarn elm-app install -y
+  - cd client
+  - yarn install
+  - yarn elm-app install -y
+  - cd -
 script:
-  - cd client && yarn elm-format --validate
-  - cd client && yarn elm-app test
-  - cd client && yarn elm-app build && echo $(cat build/index.html | sed 's/href="\//herf="/g' | sed 's/src="\//src="/g') > build/index.html
+  - cd client
+  - yarn elm-format --validate
+  - yarn elm-app test
+  - yarn elm-app build && echo $(cat build/index.html | sed 's/href="\//herf="/g' | sed 's/src="\//src="/g') > build/index.html
+  - cd -
 deploy:
   provider: pages
   skip-cleanup: true
