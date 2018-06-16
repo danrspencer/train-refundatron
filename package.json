@@ -1,10 +1,9 @@
 {
   "scripts": {
     "elm-app": "elm-app",
-    "test": "lobo --framework=elm-test",
-    "format": "elm-format ./src ./tests",
-    "analyse": "elm-analyse --elm-format-path=./node_modules/.bin/elm-format",
-    "analyse-report": "yarn analyse -s"
+    "elm-format": "elm-format ./src ./tests",
+    "elm-analyse": "elm-analyse --elm-format-path=./node_modules/.bin/elm-format",
+    "test": "lobo --framework=elm-test"
   },
   "devDependencies": {
     "create-elm-app": "^1.10.4",

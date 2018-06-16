@@ -6,6 +6,7 @@ cache:
     - "tests/elm-stuff"
 branches:
   except:
+  - gh-pages
   - version
 install:
   - 'yarn install'
@@ -13,4 +14,12 @@ install:
 script:
   - 'yarn elm-app test'
   - 'yarn format --validate'
-  
+  - 'yarn elm-app build'
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: build
+  on:
+    branch: master
