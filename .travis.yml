@@ -1,9 +1,9 @@
 language: elm
 cache:
   directories:
-    - "node_modules"
-    - "elm-stuff"
-    - "tests/elm-stuff"
+    - "client/node_modules"
+    - "client/elm-stuff"
+    - "client/tests/elm-stuff"
 branches:
   except:
   - gh-pages
@@ -12,9 +12,9 @@ install:
   - 'yarn install'
   - 'yarn elm-app install -y'
 script:
-  - 'yarn elm-format --validate'
-  - 'yarn elm-app test'
-  - 'yarn elm-app build'
+  - 'cd client && yarn elm-format --validate'
+  - 'cd client && yarn elm-app test'
+  - 'cd client && yarn elm-app build && echo $(cat build/index.html | sed 's/href="\//herf="/g' | sed 's/src="\//src="/g') > build/index.html'
 deploy:
   provider: pages
   skip-cleanup: true
