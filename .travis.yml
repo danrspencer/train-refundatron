@@ -17,7 +17,8 @@ script:
   - cd client
   - yarn elm-format --validate
   - yarn elm-app test
-  - yarn elm-app build && echo $(cat build/index.html | sed 's/href="\//herf="/g' | sed 's/src="\//src="/g') > build/index.html
+  - yarn elm-app build
+  - echo $(cat build/index.html | sed 's/href="\//herf="/g' | sed 's/src="\//src="/g') > build/index.html
   - cd -
 deploy:
   provider: pages
