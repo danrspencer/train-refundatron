@@ -4,21 +4,16 @@ import Html exposing (Html, text, div, h1, img)
 import Html.Attributes exposing (src)
 
 
-
-
 ---- HTTP ----
-
-getTrainTimes : Cmd Msg
-getTrainTimes = 
-    let
-        url =
-      "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" ++ topic
-
-    request =
-      Http.get url decodeGifUrl
-  in
-    Http.send NewGif request
-
+-- getTrainTimes : Cmd Msg
+-- getTrainTimes =
+--     let
+--         url =
+--       "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" ++ topic
+--     request =
+--       Http.get url decodeGifUrl
+--   in
+--     Http.send NewGif request
 ---- MODEL ----
 
 
